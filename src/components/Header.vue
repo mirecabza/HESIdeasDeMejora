@@ -1,9 +1,10 @@
 <template>
   <header>
-    <span class="logo">
+    <router-link to="/">
       <img src="@/assets/logo.png" alt="" />
       <h3>HES</h3>
-    </span>
+    </router-link>
+
     <span class="session">
       <img src="@/assets/logo.png" alt="" />
       <h3>Kiosco</h3>
@@ -39,7 +40,7 @@ span * {
   padding: 0 0.5rem;
 }
 
-header span {
+header * {
   display: flex;
   align-items: center;
 }
