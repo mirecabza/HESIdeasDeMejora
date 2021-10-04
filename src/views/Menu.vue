@@ -5,15 +5,15 @@
     <div class="container">
       <img id="logoidea" src="@/assets/logo.png" alt="" />
       <span class="buttons">
-        <RouterButton label="INICIO" target="idea" />
+        <RouterButton label="INICIO" target="inicio" />
         <RouterButton
           id="idea"
           label="INGRESAR UNA IDEA DE MEJORA"
           target="idea"
         />
-        <RouterButton label="INSTRUCCIÓN" target="idea" />
-        <RouterButton label="INDICADORES" target="idea" />
-        <RouterButton label="RECONOCIMIENTOS" target="idea" />
+        <RouterButton label="INSTRUCCIÓN" target="instruccion" />
+        <RouterButton label="INDICADORES" target="indicadores" />
+        <RouterButton label="RECONOCIMIENTOS" target="reconocimientos" />
         <IdeaSearch id="search-bar" />
       </span>
     </div>

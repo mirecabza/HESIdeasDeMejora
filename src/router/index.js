@@ -7,18 +7,23 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "menu",
     component: Menu,
   },
   {
     path: "/idea",
-    name: "idea",
     component: () => import("../views/Idea.vue"),
   },
   {
-    path: "/indicators",
-    name: "indicators",
+    path: "/indicadores",
     component: () => import("../views/Indicators.vue"),
+  },
+  {
+    path: "/reconocimientos",
+    component: () => import("../views/Awards.vue"),
+  },
+  {
+    path: "/dashboard",
+    component: () => import("../views/Dashboard.vue"),
   },
 ];
 

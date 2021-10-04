@@ -1,6 +1,9 @@
 <template>
   <div>
-    <RouterButton label="ESTATUS DE LAS PROPUESTAS DE MEJORA" target="" />
+    <RouterButton
+      label="ESTATUS DE LAS PROPUESTAS DE MEJORA"
+      target="dashboard"
+    />
     <input id="input" type="text" name="" />
   </div>
 </template>
