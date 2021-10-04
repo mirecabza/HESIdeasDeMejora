@@ -25,9 +25,15 @@ const routes = [
     path: "/dashboard",
     component: () => import("../views/Dashboard.vue"),
   },
+  {
+    path: "/instruccion",
+    component: () => import("../views/Prototyping.vue"),
+  },
 ];
 
 const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes,
 });
 
