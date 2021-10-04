@@ -1,4 +1,4 @@
-# sistemaideas
+# HESIdeasDeMejora
 
 ## Project setup
 ```
