@@ -74,5 +74,8 @@ h3 {
   .container {
     flex-direction: column;
   }
+  #logoidea {
+    height: 2rem;
+  }
 }
 </style>
