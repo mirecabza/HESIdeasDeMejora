@@ -1,55 +1,50 @@
 <template>
-  <header>
-    <router-link to="/">
-      <img src="@/assets/logo.png" alt="" />
-      <h3>HES</h3>
-    </router-link>
+  <v-app>
+    <v-content>
+      <v-navigation-drawer v-model="drawer" absolute temporary>
+        <v-list dense>
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            link
+            :to="item.path"
+          >
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
 
-    <span class="session">
-      <img src="@/assets/logo.png" alt="" />
-      <h3>Kiosco</h3>
-      <a href="#"><h3>Iniciar Sesion</h3></a>
-      <img src="@/assets/logo.png" alt="" />
-    </span>
-  </header>
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+      <v-app-bar app class="first">
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>HES</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn>
+          <v-icon>mdi-account-circle</v-icon>
+          Iniciar Sesión
+        </v-btn>
+      </v-app-bar>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: "Header",
+  name: "prototyping",
+  data() {
+    return {
+      drawer: null,
+      items: [
+        { title: "Home", icon: "mdi-view-dashboard", path: "/" },
+        { title: "About", icon: "mdi-forum" },
+      ],
+    };
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-header {
-  margin: 0 auto;
-  width: 100%;
-  height: 40px;
-  background-color: #1c253c;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-}
-
-a {
-  text-decoration: none;
-}
-
-span * {
-  padding: 0 0.5rem;
-}
-
-header * {
-  display: flex;
-  align-items: center;
-}
-
-.session {
-  justify-content: flex-end;
-}
-
-img {
-  width: 2rem;
-}
-</style>
+<style></style>
