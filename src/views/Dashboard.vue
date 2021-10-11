@@ -1,48 +1,52 @@
 <template>
-  <div>
-    <Header />
-    <input type="text" name="" id="searchbar" />
-    <div class="table">
-      <h6>Mes</h6>
-      <h6># Prop</h6>
-      <h6>F. Propuesta</h6>
-      <h6>Nombre</h6>
-      <h6>Área de quien propone</h6>
-      <h6>Título de la propuesta</h6>
-      <h6>Área de la mejora</h6>
-      <h6>Tipo de mejora</h6>
-      <h6>Gerente</h6>
-      <h6>a</h6>
-      <h6>b</h6>
-      <h6>c</h6>
-      <h6>d</h6>
-      <h6>e</h6>
-      <h6>f</h6>
-      <h6>g</h6>
-      <h6>h</h6>
-      <h6>i</h6>
-    </div>
-  </div>
+  <v-app>
+    <v-data-table
+      :headers="headers"
+      :items="items"
+      hide-actions
+      class="elevation-1"
+      select-all
+      pagination.sync="pagination"
+      item-key="id"
+      loading="true"
+    >
+    </v-data-table>
+  </v-app>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-
 export default {
-  name: "Dashboard",
-  components: {
-    Header,
+  data() {
+    return {
+      headers: [
+        {
+          text: "# Propuesta",
+          align: "start",
+          value: "numProp",
+        },
+        { text: "Mes", value: "mes" },
+        { text: "Fecha Propuesta", value: "fecha" },
+        { text: "Área de quien propone", value: "areaPropone" },
+        { text: "Título", value: "titulo" },
+        { text: "Área de mejora", value: "areaMejora" },
+        { text: "Tipo de mejora", value: "tipoMejora" },
+        { text: "Gerente", value: "gerente" },
+      ],
+      items: [
+        {
+          numProp: "lorem ipsum",
+          mes: "lorem ipsum",
+          fecha: "lorem ipsum",
+          areaPropone: "lorem ipsum",
+          titulo: "lorem ipsum",
+          areaMejora: "lorem ipsum",
+          tipoMejora: "lorem ipsum",
+          gerente: "lorem ipsum",
+        },
+      ],
+    };
   },
 };
 </script>
 
-<style scoped>
-.table {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr 2fr 3fr 1fr 2fr 1fr;
-  justify-items: center;
-}
-#searchbar {
-  margin: 10px 5px;
-}
-</style>
+<style></style>
