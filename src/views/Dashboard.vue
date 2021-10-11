@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <v-data-table
       :headers="headers"
       :items="items"
@@ -11,7 +11,7 @@
       loading="true"
     >
     </v-data-table>
-  </v-app>
+  </div>
 </template>
 
 <script>

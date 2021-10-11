@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <v-container grid-list-xs>
       <v-row justify="center">
         <v-col>bar chart</v-col>
@@ -9,15 +9,13 @@
         <v-col>horizontal bar chart</v-col>
       </v-row>
     </v-container>
-  </v-app>
+  </div>
 </template>
 
 <script>
-
 export default {
   name: "Indicators",
-  components: {
-  },
+  components: {},
 };
 </script>
 

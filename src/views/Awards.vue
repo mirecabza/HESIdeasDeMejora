@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <v-container grid-list-xs>
       <v-row>
         <v-col cols="12">
@@ -40,7 +40,7 @@
       loading="true"
     >
     </v-data-table>
-  </v-app>
+  </div>
 </template>
 
 <script>
