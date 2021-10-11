@@ -3,14 +3,29 @@
     <v-container grid-list-xs>
       <v-row>
         <v-col cols="12">
-          <h4>MEJROES IDEAS DEL MES</h4>
+          <h4>MEJORES IDEAS DEL MES</h4>
         </v-col>
       </v-row>
       <v-row justify="space-around">
         <!-- Podium, 3 of the below cols -->
-        <ProjectCard title="test" author="author" description="description" />
-        <ProjectCard title="test" author="author" description="description" />
-        <ProjectCard title="test" author="author" description="description" />
+        <ProjectCard
+          place="1"
+          title="test"
+          author="author"
+          description="description"
+        />
+        <ProjectCard
+          place="2"
+          title="test"
+          author="author"
+          description="description"
+        />
+        <ProjectCard
+          place="3"
+          title="test"
+          author="author"
+          description="description"
+        />
       </v-row>
     </v-container>
     <v-spacer></v-spacer>
