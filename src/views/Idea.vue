@@ -1,58 +1,107 @@
 <template>
-  <div>
-    <Header />
-    <h1>SISTEMA DE IDEAS DE MEJORA</h1>
-    <h3>Registro de Ideas de mejora</h3>
-    <h3>Información del emisor</h3>
-    <form action="">
-      <select name="" id="emisor"></select>
-      <select name="" id="depto"></select>
-      <select name="" id="areapropone"></select>
-      <select name="" id="supervisorpropone"></select>
-      <select name="" id="gerentepropone"></select>
-      <select name="" id="areaoportunidad"></select>
-      <select name="" id="supervisoroportunidad"></select>
-      <select name="" id="gerenteoportunidad"></select>
-      <input
-        placeholder="Título de la propuesta"
-        type="text"
-        name=""
-        id="titulo"
-      />
-      <textarea
-        placeholder="Oportunidad de mejora"
-        name=""
-        id="oportunidad"
-        cols="30"
-        rows="10"
-      ></textarea>
-      <textarea
-        placeholder="Propuesta de mejora"
-        name=""
-        id="propuesta"
-        cols="30"
-        rows="10"
-      ></textarea>
-    </form>
-    <button>CANCELAR</button>
-    <button type="submit">GUARDAR</button>
-  </div>
+  <v-app>
+    <v-content>
+      <h2>Registro de ideas de mejora</h2>
+      <v-container>
+        <v-row>
+          <v-col
+            ><v-text-field name="emisor" label="Emisor" id="id"></v-text-field
+          ></v-col>
+          <v-col
+            ><v-text-field name="depto" label="DEPTO" id="id"></v-text-field
+          ></v-col>
+          <v-col
+            ><v-text-field
+              name="areaPropone"
+              label="Área de quien propone"
+              id="id"
+            ></v-text-field
+          ></v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><v-text-field
+              name="supervisorPropone"
+              label="supervisor de quien propone"
+              id="id"
+            ></v-text-field
+          ></v-col>
+          <v-col
+            ><v-text-field name="name" label="label" id="id"></v-text-field
+          ></v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><v-text-field
+              name="areaOportunidad"
+              label="Área de oportunidad de mejora"
+              id="id"
+            ></v-text-field
+          ></v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            ><v-text-field
+              name="supervisorArea"
+              label="Supervisor del área de mejora"
+              id="id"
+            ></v-text-field
+          ></v-col>
+          <v-col
+            ><v-text-field
+              name="gerenteArea"
+              label="Gerente del Área de mejora"
+              id="id"
+            ></v-text-field
+          ></v-col>
+        </v-row>
+        <v-row
+          ><v-text-field
+            name="titulo"
+            label="Título de la propuesta"
+            id="id"
+          ></v-text-field
+        ></v-row>
+        <v-row
+          ><v-text-field
+            name="oportunidad"
+            label="Oportunidad de mejora"
+            id="id"
+          ></v-text-field
+        ></v-row>
+        <v-row
+          ><v-text-field
+            name="propuesta"
+            label="Propuesta de mejora"
+            id="id"
+          ></v-text-field
+        ></v-row>
+        <v-row>
+          <v-col>
+            <template>
+              <v-file-input
+                accept="image/*"
+                label="File input"
+                prepend-icon="mdi-camera"
+              ></v-file-input>
+            </template>
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-col cols="auto">
+            <v-btn color="error">CANCELAR</v-btn>
+          </v-col>
+          <v-col cols="auto">
+            <v-btn color="success">GUARDAR</v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-
-export default {
-  name: "Idea",
-  components: {
-    Header,
-  },
-};
+export default {};
 </script>
 
-<style scoped>
-form {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-</style>
+<style></style>
