@@ -1,81 +1,82 @@
 <template>
-  <div class="Menu">
+  <v-app>
     <Header />
-    <h3>SISTEMA DE IDEAS DE MEJORA</h3>
     <div class="container">
-      <img id="logoidea" src="@/assets/logo.png" alt="" />
-      <span class="buttons">
-        <RouterButton label="INICIO" target="inicio" />
-        <RouterButton
-          id="idea"
-          label="INGRESAR UNA IDEA DE MEJORA"
-          target="idea"
-        />
-        <RouterButton label="INSTRUCCIÓN" target="instruccion" />
-        <RouterButton label="INDICADORES" target="indicadores" />
-        <RouterButton label="RECONOCIMIENTOS" target="reconocimientos" />
-        <IdeaSearch id="search-bar" />
-      </span>
+      <v-container>
+        <v-row>
+          <v-col>
+            <h3>SISTEMA DE IDEAS DE MEJORA</h3>
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-col cols="12" md="3" lg="3" xl="3" align-self="center">
+            <v-img src="../assets/logo.png" max-height="20rem" contain />
+          </v-col>
+          <v-col cols="">
+            <v-container>
+              <v-row>
+                <v-col cols="4">
+                  <v-btn block color="info" to="/">INICIO</v-btn>
+                </v-col>
+                <v-col cols="8">
+                  <v-btn block color="info" to="/idea">
+                    INGRESAR IDEA DE MEJORA
+                  </v-btn>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <v-btn block color="info" to="/instruccion">
+                    INSTRUCCIÓN
+                  </v-btn>
+                </v-col>
+                <v-col cols="4">
+                  <v-btn block color="info" to="/indicadores">
+                    INDICADORES
+                  </v-btn>
+                </v-col>
+                <v-col cols="4">
+                  <v-btn block color="info" to="/reconocimientos">
+                    RECONOCIMIENTOS
+                  </v-btn>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <v-btn block color="info" to="/dashboard"
+                    >ESTATUS DE PROPUESTAS DE MEJORA</v-btn
+                  >
+                </v-col>
+              </v-row>
+              <v-row no-gutters>
+                <v-col>
+                  <v-text-field
+                    filled
+                    label="Buscar"
+                    v-model="value"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
-    <div style="height: 10px"></div>
-  </div>
+  </v-app>
 </template>
 
 <script>
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
-import RouterButton from "@/components/RouterButton.vue";
-import IdeaSearch from "@/components/IdeaSearch.vue";
 
 export default {
   name: "Menu",
-  components: {
-    Header,
-    RouterButton,
-    IdeaSearch,
-  },
+  components: { Header, },
 };
 </script>
 
-<style scoped>
-header {
-  margin-bottom: 1rem;
-}
-
+<style>
 h3 {
   text-align: center;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  grid-gap: 10px;
-  margin: 0 auto;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
-}
-
-#idea {
-  grid-column-start: 2;
-  grid-column-end: span 2;
-}
-
-#search-bar {
-  width: 100%;
-  grid-column-start: 0;
-  grid-column-end: span 3;
-}
-
-@media only screen and (max-width: 830px) {
-  .container {
-    flex-direction: column;
-  }
-  #logoidea {
-    height: 2rem;
-  }
 }
 </style>
