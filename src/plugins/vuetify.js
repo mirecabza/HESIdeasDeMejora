@@ -12,8 +12,7 @@ export default new Vuetify({
         third: "#7b92f5",
         fourth: "#bfd0ff;",
         accent: "#000000",
-        error: "#000000",
-        
+        error: "#f00",
       },
     },
   },
