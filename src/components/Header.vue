@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" fixed app temporary>
       <v-list dense>
         <v-list-item
           v-for="item in items"
@@ -18,7 +18,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app class="first">
+    <v-app-bar class="first" app>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>HES</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -45,4 +45,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>
