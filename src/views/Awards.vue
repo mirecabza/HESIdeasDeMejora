@@ -1,90 +1,61 @@
 <template>
-  <div>
-    <Header />
-    <h3>SISTEMA DE IDEAS DE MEJORA</h3>
-    <h4>MEJROES IDEAS DEL MES</h4>
-    <div class="podium-header">
-      <span class="podium-label">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>1ER LUGAR</h4>
-      </span>
-      <span class="podium-label">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>2DO LUGAR</h4>
-      </span>
-      <span class="podium-label">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>3ER LUGAR</h4>
-      </span>
-    </div>
-    <div id="streak"></div>
-    <div class="images">
-      <span id="1-place" class="place">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>NAME</h4>
-      </span>
-      <span id="2-place" class="place">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>NAME</h4>
-      </span>
-      <span id="3-place" class="place">
-        <img src="@/assets/logo.png" alt="" />
-        <h4>NAME</h4>
-      </span>
-    </div>
-    <h4>PARTICIPACIÓN</h4>
-    <div class="table">
-      <h5># Prop</h5>
-      <h5>Nombre</h5>
-      <h5>Área de quien propone</h5>
-      <h5>Título de la propuesta</h5>
-      <h5>a</h5>
-      <h5>b</h5>
-      <h5>c</h5>
-      <h5>d</h5>
-    </div>
-  </div>
+  <v-app>
+    <v-container grid-list-xs>
+      <v-row>
+        <v-col cols="12">
+          <h4>MEJROES IDEAS DEL MES</h4>
+        </v-col>
+      </v-row>
+      <v-row justify="space-around">
+        <!-- Podium, 3 of the below cols -->
+        <ProjectCard title="test" author="author" description="description" />
+        <ProjectCard title="test" author="author" description="description" />
+        <ProjectCard title="test" author="author" description="description" />
+      </v-row>
+    </v-container>
+    <v-spacer></v-spacer>
+    <v-data-table
+      :headers="headers"
+      :items="items"
+      hide-actions
+      class="elevation-1"
+      select-all
+      pagination.sync="pagination"
+      item-key="id"
+      loading="true"
+    >
+    </v-data-table>
+  </v-app>
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-
+import ProjectCard from "@/components/ProjectCard.vue";
 export default {
-  name: "Awards",
-  components: {
-    Header,
+  components: { ProjectCard },
+  data() {
+    return {
+      headers: [
+        {
+          text: "# Prop",
+          align: "start",
+          value: "numProp",
+        },
+        { text: "Nombre", value: "nombre" },
+        { text: "Área de quien propone", value: "areaPropone" },
+        { text: "Título de la propuesta", value: "titulo" },
+      ],
+      items: [
+        { numProp: "123", nombre: "asdf", areaPropone: "asdf", titulo: "asdf" },
+      ],
+    };
   },
 };
 </script>
 
 <style scoped>
 h3,
-h4 {
+h4,
+p {
   text-align: center;
-}
-.podium-header {
-  display: flex;
-  justify-content: space-around;
-}
-.podium-label {
-  display: flex;
-  align-items: center;
-}
-.podium-label img {
-  height: 50px;
-}
-#streak {
-  background-color: blue;
-  height: 6px;
-  margin: 0 2rem;
-}
-.images {
-  display: flex;
-  justify-content: space-around;
-}
-.table {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
 }
 </style>
