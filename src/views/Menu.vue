@@ -6,29 +6,29 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col cols="12" md="3" lg="3" xl="3" align-self="center">
+      <v-col cols="12" md="3" align-self="center">
         <v-img src="../assets/logo.png" max-height="20rem" contain />
       </v-col>
       <v-col cols="">
         <v-container>
           <v-row>
-            <v-col cols="4">
+            <v-col cols="12" sm="4">
               <v-btn block color="info" to="/">INICIO</v-btn>
             </v-col>
-            <v-col cols="8">
+            <v-col cols="12" sm="8">
               <v-btn block color="info" to="/idea">
                 INGRESAR IDEA DE MEJORA
               </v-btn>
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="4">
+            <v-col cols="12" sm="4">
               <v-btn block color="info" to="/instruccion"> INSTRUCCIÓN </v-btn>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" sm="4">
               <v-btn block color="info" to="/indicadores"> INDICADORES </v-btn>
             </v-col>
-            <v-col cols="4">
+            <v-col cols="12" sm="4">
               <v-btn block color="info" to="/reconocimientos">
                 RECONOCIMIENTOS
               </v-btn>
