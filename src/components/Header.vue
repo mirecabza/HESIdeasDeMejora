@@ -19,12 +19,14 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar class="first" app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>HES</v-toolbar-title>
+      <v-app-bar-nav-icon @click="drawer = !drawer" color="white"></v-app-bar-nav-icon>
+
+
+      <v-toolbar-title class="white--text">HES</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn>
-        <v-icon>mdi-account-circle</v-icon>
-        Iniciar Sesión
+        <v-icon left>mdi-account-circle</v-icon>
+        <span>Iniciar Sesión</span>
       </v-btn>
     </v-app-bar>
   </div>
@@ -37,8 +39,24 @@ export default {
     return {
       drawer: null,
       items: [
-        { title: "Home", icon: "mdi-view-dashboard", path: "/" },
-        { title: "About", icon: "mdi-forum" },
+        { title: "Home", icon: "mdi-home", path: "/" },
+        { title: "idea", icon: "mdi-lightbulb", path: "/idea" },
+        {
+          title: "indicadores",
+          icon: "mdi-chart-bar",
+          path: "/indicadores",
+        },
+        {
+          title: "reconocimientos",
+          icon: "mdi-license",
+          path: "/reconocimientos",
+        },
+        { title: "dashboard", icon: "mdi-view-dashboard", path: "/dashboard" },
+        {
+          title: "instruccion",
+          icon: "mdi-school",
+          path: "/instruccion",
+        },
       ],
     };
   },
