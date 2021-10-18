@@ -28,7 +28,7 @@
         />
       </v-row>
     </v-container>
-    <v-spacer></v-spacer>
+    <div class="spacer"></div>
     <v-data-table
       :headers="headers"
       :items="items"
@@ -72,5 +72,9 @@ h3,
 h4,
 p {
   text-align: center;
+}
+
+.spacer {
+  height: 40px;
 }
 </style>
