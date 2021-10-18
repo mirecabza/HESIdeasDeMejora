@@ -26,7 +26,7 @@
           ></v-text-field
         ></v-col>
         <v-col
-          ><v-text-field name="name" label="label" id="id"></v-text-field
+          ><v-text-field name="gerentePropone" label="Gerente de quien propone" id="id"></v-text-field
         ></v-col>
       </v-row>
       <v-row>
@@ -102,4 +102,8 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+h2 {
+  text-align: center;
+}
+</style>
