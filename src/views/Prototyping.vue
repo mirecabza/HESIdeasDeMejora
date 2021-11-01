@@ -1,11 +1,18 @@
 <template>
   <div>
-    <v-btn color="success">text</v-btn>
+    <HorizontalBarChart />
   </div>
 </template>
 
 <script>
-export default {};
+import HorizontalBarChart from '@/components/HorizontalBarChart.vue';
+export default {
+  components: {
+    HorizontalBarChart,
+  }
+}
 </script>
 
-<style></style>
+<style>
+
+</style>
