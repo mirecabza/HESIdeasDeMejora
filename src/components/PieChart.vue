@@ -2,7 +2,7 @@
   <div id="app">
     <GChart
       :settings="{ packages: ['corechart'] }"
-      :data="chartData"
+      :data="inputData"
       :options="chartOptions"
       :createChart="(el, google) => new google.visualization.PieChart(el)"
       @ready="onChartReady"
@@ -17,15 +17,12 @@ export default {
   components: {
     GChart,
   },
+  props: {
+    inputData: Array,
+  },
   data() {
     return {
       chartsLib: null,
-      // Array will be automatically processed with visualization.arrayToDataTable function
-      chartData: [
-        ["Task", "Hours per Day"],
-        ["1", 25],
-        ["2", 75],
-      ],
     };
   },
   computed: {

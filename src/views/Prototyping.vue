@@ -1,18 +1,21 @@
 <template>
   <div>
-    <HorizontalBarChart />
+    <PropsTest v-bind:text="text" />
   </div>
 </template>
 
 <script>
-import HorizontalBarChart from '@/components/HorizontalBarChart.vue';
+import PropsTest from "@/components/PropsTest.vue";
 export default {
   components: {
-    HorizontalBarChart,
-  }
-}
+    PropsTest,
+  },
+  data() {
+    return {
+      text: [1,2,3],
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

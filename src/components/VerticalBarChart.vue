@@ -2,7 +2,7 @@
   <div id="app">
     <GChart
       :settings="{ packages: ['bar'] }"
-      :data="chartData"
+      :data="inputData"
       :options="chartOptions"
       :createChart="(el, google) => new google.charts.Bar(el)"
       @ready="onChartReady"
@@ -17,25 +17,14 @@ export default {
   components: {
     GChart,
   },
+  props: {
+    inputData: Array,
+  },
   data() {
     return {
       chartsLib: null,
       // Array will be automatically processed with visualization.arrayToDataTable function
-      chartData: [
-        ["Mes", "Sales"],
-        ["ENE", 2],
-        ["FEB", 10],
-        ["MAR", 5],
-        ["ABR", 8],
-        ["MAY", 9],
-        ["JUN", 7],
-        ["JUL", 5],
-        ["AGO", 3],
-        ["SEP", 4],
-        ["OCT", 6],
-        ["NOV", 9],
-        ["DIC", 5],
-      ],
+      
     };
   },
   computed: {
