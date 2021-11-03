@@ -26,7 +26,11 @@
           ></v-text-field
         ></v-col>
         <v-col
-          ><v-text-field name="gerentePropone" label="Gerente de quien propone" id="id"></v-text-field
+          ><v-text-field
+            name="gerentePropone"
+            label="Gerente de quien propone"
+            id="id"
+          ></v-text-field
         ></v-col>
       </v-row>
       <v-row>
@@ -91,7 +95,13 @@
           <v-btn color="error">CANCELAR</v-btn>
         </v-col>
         <v-col cols="auto">
-          <v-btn color="success">GUARDAR</v-btn>
+          <v-btn
+            color="success"
+            :loading="loading"
+            :disabled="loading"
+            @click="loader = 'loading'"
+            >GUARDAR</v-btn
+          >
         </v-col>
       </v-row>
     </v-container>
@@ -99,7 +109,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      loader: null,
+      loading: false,
+    };
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+
+      setTimeout(() => (this[l] = false), 3000);
+
+      this.loader = null;
+    },
+  },
+};
 </script>
 
 <style scoped>
