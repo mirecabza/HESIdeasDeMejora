@@ -35,6 +35,7 @@ export default {
         bars: "horizontal", // Required for Material Bar Charts.
         hAxis: { format: "decimal" },
         height: 300,
+        
         colors: ["#435898"],
       });
     },
