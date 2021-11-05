@@ -8,32 +8,18 @@
       </v-row>
       <v-row justify="space-around">
         <!-- Podium, 3 of the below cols -->
-        <ProjectCard
-          place="1"
-          title="test"
-          author="author"
-          description="description"
-        />
-        <ProjectCard
-          place="2"
-          title="test"
-          author="author"
-          description="description"
-        />
-        <ProjectCard
-          place="3"
-          title="test"
-          author="author"
-          description="description"
-        />
+        <ProjectCard :items="firstPlace" />
+        <ProjectCard :items="secondPlace" />
+        <ProjectCard :items="thirdPlace" />
       </v-row>
     </v-container>
     <div style="height: 40px"></div>
     <h4>PARTICIPACION</h4>
     <div style="height: 20px"></div>
     <v-data-table
-      :headers="headers"
-      :items="items"
+      style="margin: 0 2rem"
+      :headers="tableHeaders"
+      :items="tableData"
       hide-actions
       class="elevation-1"
       select-all
@@ -51,7 +37,7 @@ export default {
   components: { ProjectCard },
   data() {
     return {
-      headers: [
+      tableHeaders: [
         {
           text: "# Prop",
           align: "start",
@@ -61,9 +47,27 @@ export default {
         { text: "Área de quien propone", value: "areaPropone" },
         { text: "Título de la propuesta", value: "titulo" },
       ],
-      items: [
+      tableData: [
         { numProp: "123", nombre: "asdf", areaPropone: "asdf", titulo: "asdf" },
       ],
+      firstPlace: {
+        place: "1",
+        title: "test",
+        author: "author",
+        description: "description",
+      },
+      secondPlace: {
+        place: "2",
+        title: "test",
+        author: "author",
+        description: "description",
+      },
+      thirdPlace: {
+        place: "3",
+        title: "test",
+        author: "author",
+        description: "description",
+      },
     };
   },
 };

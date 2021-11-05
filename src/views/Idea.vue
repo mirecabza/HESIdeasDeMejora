@@ -1,13 +1,15 @@
 <template>
   <div>
+    <div style="margin: 2rem 0"></div>
     <h2>Registro de ideas de mejora</h2>
+    <div style="margin: 2rem 0"></div>
     <v-container>
       <v-row>
         <v-col
           ><v-text-field name="emisor" label="Emisor" id="id"></v-text-field
         ></v-col>
         <v-col
-          ><v-text-field name="depto" label="DEPTO" id="id"></v-text-field
+          ><v-text-field name="depto" label="Departamento" id="id"></v-text-field
         ></v-col>
         <v-col
           ><v-text-field
@@ -21,7 +23,7 @@
         <v-col
           ><v-text-field
             name="supervisorPropone"
-            label="supervisor de quien propone"
+            label="Supervisor de quien propone"
             id="id"
           ></v-text-field
         ></v-col>
@@ -84,7 +86,7 @@
           <template>
             <v-file-input
               accept="image/*"
-              label="File input"
+              label="Foto antes"
               prepend-icon="mdi-camera"
             ></v-file-input>
           </template>
@@ -92,7 +94,7 @@
       </v-row>
       <v-row justify="center">
         <v-col cols="auto">
-          <v-btn color="error">CANCELAR</v-btn>
+          <v-btn color="error" to="/">CANCELAR</v-btn>
         </v-col>
         <v-col cols="auto">
           <v-btn

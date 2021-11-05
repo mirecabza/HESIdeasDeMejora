@@ -1,6 +1,9 @@
 <template>
   <div>
+    <div style="height: 2rem"></div>
+    <h4 style="text-align: center">MEJORES IDEAS DEL MES</h4>
     <v-data-table
+      style="margin: 2rem"
       :headers="headers"
       :items="items"
       hide-actions
